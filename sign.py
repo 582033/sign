@@ -32,11 +32,12 @@ class Sign:
 
         #进行请求
         form_data = info['form'] if 'form' in info else {}
+        header_data = info['header'] if 'header' in info else {}
 
         if (info['method'] == 'get'):
-            r = requests.get(info['url'], cookies=cookie)
+            r = requests.get(info['url'], cookies=cookie, headers=header_data)
         if (info['method'] == 'post'):
-            r = requests.post(info['url'], cookies=cookie, data=form_data)
+            r = requests.post(info['url'], cookies=cookie, data=form_data, headers=header_data)
         soup = BeautifulSoup(r.content, 'html.parser')
         return soup
 
@@ -61,6 +62,15 @@ if __name__ == '__main__':
                     'ie' : 'utf-8',
                     'kw' : '李毅',
                     'tbs' : 'ae7fce58040c07061469429777'
+            }
+        },
+        'smzdm' : {
+            'url' : 'http://zhiyou.smzdm.com/user/checkin/jsonp_checkin',
+            'method' : 'get',
+            'header' : {
+                'User-Agent' : 'Mozilla/5.0 (Windows NT 6.1; rv:20.0) Gecko/20100101 Firefox/20.0',
+                'Host' : 'zhiyou.smzdm.com',
+                'Referer' : 'http://www.smzdm.com/'
             }
         }
     }
