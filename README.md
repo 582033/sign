@@ -1,6 +1,6 @@
 ###基于cookie的简易签到
 
-> 可配合crontab进行京东自动领金币,贴吧自动签到等
+> 可配合crontab进行京东自动领金币,贴吧自动签到,smzdm自动签到等
 
 1. chrome安装[EditThisCooike](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg/reviews)插件
 2. 使用 EditThisCooike 复制cookie到粘贴板 ![](http://ww3.sinaimg.cn/large/633e0588jw1f6ahc8i0mnj20um0yy42o.jpg)
